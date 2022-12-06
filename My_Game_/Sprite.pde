@@ -40,14 +40,14 @@ class Sprite
   {
     pushMatrix();
       translate(this.location.x,this.location.y);
-      noStroke();
-      fill(0,200,255);
-      circle(0,0,10);
-      fill(color(255,0,0,20));
-      circle(0,0,min(this.boxx,this.boxy));
+     // noStroke();
+   //   fill(0,200,255);
+    //  circle(0,0,10);
+   //   fill(color(255,0,0,20));
+    //   circle(0,0,min(this.boxx*0.6,this.boxy*0.6));
       translate(-this.reg.x,-this.reg.y);
-     fill(color(0,100,250,50));
-     rect(0,0,boxx,boxy);
+    // fill(color(0,100,250,50));
+    // rect(0,0,boxx,boxy);
       
      
       if(this.nAni > 0) this.ani[this.currentAni].display();

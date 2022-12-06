@@ -14,7 +14,7 @@ int nBoulder = 4;
 
 void setup()
 {
-  size(1200,800);
+  size(1200,800,P3D);
   //fullScreen();
   beep = new SoundFile(this,"beep.wav");
   reset();
@@ -31,7 +31,7 @@ void draw()
 
 void reset()
 {
-  s = new Zombie(100,150,350,400);
+  s = new Zombie(207,150,415,300);
   String[] files = {"cat1.png","cat2.png"};
   s.addAnimation(new Animation(files));
   String[] files1 = {"cat1a.png","cat2a.png"};
@@ -70,7 +70,7 @@ void reset()
   b=new Boulder [nBoulder];
   for(int i = 0; i < nBoulder; i = i + 1)
   {
-    b[i]= new Boulder(0,0,100,100);
+    b[i]= new Boulder(0,0,85,85);
     b[i].addAnimation(new Animation(files10));
     b[i].addAnimation(new Animation(files11));
     b[i].addAnimation(new Animation(files12));
@@ -106,7 +106,7 @@ void startScreen()
 
 void game () 
 {
-   background(255);
+   background(183,193,255);
   translate(width/2,height/2);
   for(int i = 0; i < nGround; i = i + 1)
   {
@@ -144,7 +144,7 @@ boolean collision(Sprite s1, Sprite s2)
   PVector loc2 = new PVector(s2.location.x,s2.location.y);
   PVector d = loc1.sub(loc2);
   float dist = d.mag();
-  float limit = (min(s1.boxx,s1.boxy)/2)+(min(s2.boxx,s2.boxy)/2);
+  float limit = (min(s1.boxx,s1.boxy)/3)+(min(s2.boxx,s2.boxy)/3);
   if(dist < limit) return(true);
   return(false);
 }

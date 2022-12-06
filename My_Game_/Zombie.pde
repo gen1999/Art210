@@ -6,7 +6,7 @@ class Zombie extends Sprite
    Zombie(float xreg, float yreg, float bx, float by)
    {
      super(xreg,yreg,bx,by);
-     this.location.x = (-width/2)+100;
+     this.location.x = (-width/2)+150;
      this.location.y = (height/2)-200;
    }
    
@@ -14,7 +14,7 @@ class Zombie extends Sprite
    {
      if(nJump < 3)
      {
-       this.velocity.y = -8;
+       this.velocity.y = -12;
        this.acceleration.y = 0.2;
        this.isJump = true;
        this.nJump = this.nJump + 1;
